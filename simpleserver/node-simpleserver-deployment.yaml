@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-simpleserver-deployment
+  labels:
+    app: simpleserver
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simpleserver
+  template:
+    metadata:
+      labels:
+        app: simpleserver
+    spec:
+      containers:
+      - name: node-simpleserver
+        image: agpartha/privreg:node-simpleserver-0.0.1-SNAPSHOT
+        imagePullPolicy: Never
+#        image: index.docker.io/agpartha/privreg:node-simpleserver-0.0.1-SNAPSHOT
+#        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+#      imagePullSecrets:
+#      - name: regcred
