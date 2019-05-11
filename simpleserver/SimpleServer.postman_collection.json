@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "1a9d6342-d7dc-408f-841f-972ff67eda0f",
+		"name": "SimpleServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Appplication Health Information",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{simpleserver_url}}/info",
+					"host": [
+						"{{simpleserver_url}}"
+					],
+					"path": [
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Application Build Number Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{simpleserver_url}}/info/build",
+					"host": [
+						"{{simpleserver_url}}"
+					],
+					"path": [
+						"info",
+						"build"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Application Version Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{simpleserver_url}}/info/version",
+					"host": [
+						"{{simpleserver_url}}"
+					],
+					"path": [
+						"info",
+						"version"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
